@@ -1,0 +1,7 @@
+Jesus = (lambda a: a + '!!!')
+
+# call on Jesus
+Jesus('hello')
+Jesus('Praise the Lord')
+
+
