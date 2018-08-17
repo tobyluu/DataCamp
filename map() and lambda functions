@@ -1,0 +1,46 @@
+# Function map takes two arguments: map(func, seq)
+# map() applies the function to ALL elements in the
+sequence
+
+# So far, you've used lambda functions to write short,
+# simple functions as well as to redefine functions with simple functionality.
+# The best use case for lambda functions,
+# however, are for when you want these simple functionalities to be anonymously embedded within larger expressions.
+# What that means is that the functionality is not stored in the environment, unlike a function defined with def.
+# To understand this idea better, you will use a lambda function in the context of the map() function.
+
+########
+
+nums = [48, 6, 9, 21, 1]
+square_all = map(lambda num: num ** 2, nums)
+
+print(square_all)
+<map object at 0x103e065c0>
+
+print(list(square_all))
+[2304, 36, 81, 441, 1]
+
+########
+
+
+nums = [2, 4, 6, 8, 10]
+
+result = map(lambda a: a ** 2, nums)
+
+
+
+######
+
+# Exercise:
+
+# Create a list of strings: spells
+spells = ["protego", "accio", "expecto patronum", "legilimens"]
+
+# Use map() to apply a lambda function over spells: shout_spells
+shout_spells = map(lambda item: item + '!!!', spells)
+
+# Convert shout_spells to a list: shout_spells_list
+shout_spells_list = list(shout_spells)
+
+# Convert shout_spells into a list and print it
+print(shout_spells_list)
